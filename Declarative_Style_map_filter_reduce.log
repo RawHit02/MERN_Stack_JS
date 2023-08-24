@@ -1,0 +1,31 @@
+const arr=[1,2,3,4,5,6];
+undefined
+const nums = arr.filter(numb=>numb%2===0);
+undefined
+nums
+(3) [2, 4, 6]
+const numbers =[1,2,3,5,6,9,20];
+undefined
+const num = numbers.map(numb => numb*2);
+undefined
+num
+(7) [2, 4, 6, 10, 12, 18, 40]
+const numbe = numbers.map(nume=>nume**2);
+undefined
+numbe;
+(7) [1, 4, 9, 25, 36, 81, 400]
+//filter is used when we have to create an new array     
+undefined
+//map is used when we have to tranform element in same array like doubling the array, etc the array remaing with same size
+undefined
+const numbers = [1,2,3,4,5,6,7];
+undefined
+const sumofSquares = numbers.reduce((acc,number) => acc+number * number, 0);
+undefined
+console.log(sumofSquares);
+VM1545:1 140
+undefined
+//reduce is also an Declarative Style Keyword we use this educe an array to a sinle value e.g summing up operations etc
+undefined
+// Declarative Style ->  map , filter , reduce :  
+undefined

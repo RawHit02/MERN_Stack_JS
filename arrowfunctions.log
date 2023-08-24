@@ -1,0 +1,114 @@
+function calc(){
+    
+VM69:2 Uncaught SyntaxError: Unexpected end of input
+function calc(){
+    
+VM71:2 Uncaught SyntaxError: Unexpected end of input
+function calc(){
+    var add = function(x,y);
+    
+VM99:2 Uncaught SyntaxError: Unexpected token ';'
+function calc(){
+    var add = function(x,y){
+    
+VM108:3 Uncaught SyntaxError: Unexpected end of input
+function calc(){
+    var add = function (x,y){
+        return x+y;
+    }
+    var sub = function(x,y){
+        return x-y;
+    }
+    return{add,sub};
+}
+    
+undefined
+var t = calc(20,30);
+undefined
+typeof(t);
+'object'
+t();
+VM303:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM303:1
+t;
+{add: ƒ, sub: ƒ}
+t.add(23,23);
+46
+t.sub(89,23);
+66
+t;
+{add: ƒ, sub: ƒ}
+//this become in the form of key value pairs like add is key and f is value which is function
+undefined
+t
+{add: ƒ, sub: ƒ}
+//4> Arrow Functions
+undefined
+ var add = (x,y) => x+y;
+undefined
+typeof add;
+'function'
+add(30,292);
+322
+// Arrow function is  -> pure Function
+undefined
+var adder = (x,y)=>{
+    console.log(x,y);
+    return x+y;
+}
+undefined
+adder(0231,123);
+VM1072:2 153 123
+276
+console.dir(show());
+VM1228:1 Uncaught ReferenceError: show is not defined
+    at <anonymous>:1:9
+(anonymous) @ VM1228:1
+console.dir(show);
+VM1237:1 Uncaught ReferenceError: show is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM1237:1
+console.dir(adder);
+VM1264:1 adder()length: 2name: "adder"arguments: (...)caller: (...)[[FunctionLocation]]: VM1072:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+var myadd = () =>{
+    console.log(arguments.length);
+    
+VM1463:3 Uncaught SyntaxError: Unexpected end of input
+var myadd = () =>{
+    console.log(arguments.length);
+}
+    
+undefined
+function disp(){
+    console.log(arguments.length);
+}
+undefined
+disp(23,23);
+VM1652:2 2
+undefined
+myadd(23,44);
+VM1469:2 Uncaught ReferenceError: arguments is not defined
+    at myadd (<anonymous>:2:17)
+    at <anonymous>:1:1
+myadd @ VM1469:2
+(anonymous) @ VM1725:1
+var myadd = (...a) =>{
+    console.log(a.length);
+}
+    
+undefined
+myadd(20,290,39,20);
+VM1748:2 4
+undefined
+var g =() =>"Hello";
+undefined
+g;
+() =>"Hello"
+g();
+'Hello'
+var y = x=>x*x;
+undefined
+y(20);
+400

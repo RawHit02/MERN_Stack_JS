@@ -1,0 +1,142 @@
+// Function and its Type
+undefined
+function show(x,y){
+    return x+y;
+}
+undefined
+show(20,30);
+50
+function show(x,y){
+    return x+y;
+}
+shoe(30,20);
+VM300:4 Uncaught ReferenceError: shoe is not defined
+    at <anonymous>:4:1
+(anonymous) @ VM300:4
+function show(x,y){
+    return x+y;
+}
+var x =show(30,20);
+undefined
+function show(x,y){
+    return x+y;
+}
+var x =show(30,20);
+sonsole.log(z);
+VM374:5 Uncaught ReferenceError: sonsole is not defined
+    at <anonymous>:5:1
+(anonymous) @ VM374:5
+function show(x,y){
+    return x+y;
+}
+var x =show(30,20);
+console.log(z);
+VM381:5 Uncaught ReferenceError: z is not defined
+    at <anonymous>:5:13
+(anonymous) @ VM381:5
+function show(x,y){
+    return x+y;
+}
+var x =show(30,20);
+console.log(x);
+VM394:5 50
+undefined
+function test(){
+    return 10,20;
+}
+undefined
+test(0;
+VM490:1 Uncaught SyntaxError: missing ) after argument list
+test();
+20
+test(); // last value will be returned
+20
+function disp(){
+    return [10,20,30];
+}
+var m = disp();
+undefined
+function disp(){
+    return [10,20,30];
+}
+var m = disp();
+console.log(m);
+VM754:5 (3) [10, 20, 30]
+undefined
+function out(){
+    return{x:10,y:39 , z:90}
+}
+undefined
+var g = out();
+undefined
+g
+{x: 10, y: 39, z: 90}
+function add(){
+    return functionadder(){
+VM988:2 Uncaught SyntaxError: Unexpected token '{'
+function add(){
+    return functionadder(){
+        console.log("dbidcbsaidbcsibcisa");
+    }
+}
+VM1068:2 Uncaught SyntaxError: Unexpected token '{'
+function add(){
+    function funcadder(){
+        console.log("i am adder");
+    }
+}
+undefined
+add()
+undefined
+function add(){
+    return function adder(){
+        console.log("adder");
+    }
+}
+undefined
+add()
+ƒ adder(){
+        console.log("adder");
+    }
+add()()
+VM1173:3 adder
+undefined
+var d = add(0;
+VM1273:1 Uncaught SyntaxError: missing ) after argument list
+var d = add();
+undefined
+typeof(d)
+'function'
+d;
+ƒ adder(){
+        console.log("adder");
+    }
+d();
+VM1173:3 adder
+undefined
+function out(){
+    return{x:10,y:39 , z:90}
+}
+undefined
+out()[0];
+undefined
+out()();
+VM1435:1 Uncaught TypeError: out(...) is not a function
+    at <anonymous>:1:6
+(anonymous) @ VM1435:1
+out()[];
+VM1445:1 Uncaught SyntaxError: Unexpected token ']'
+out();
+{x: 10, y: 39, z: 90}
+function oute(){
+    return [20,30,90];
+}
+undefined
+oute()[0];
+20
+function out(){
+    return{x:10,y:39 , z:90}
+}
+undefined
+out()['x']
+10

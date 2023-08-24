@@ -1,0 +1,177 @@
+function show(...args){
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+undefined
+show();
+VM456:2 Args  []length: 0[[Prototype]]: Array(0)
+VM456:3 object
+VM456:4 Instance of true
+undefined
+show(10,20,30,40,50,60);
+VM456:2 Args  (6) [10, 20, 30, 40, 50, 60]0: 101: 202: 303: 404: 505: 60length: 6[[Prototype]]: Array(0)
+VM456:3 object
+VM456:4 Instance of true
+undefined
+function show(...w, ...args){  // we cannot place more then one Rest Parameters ...name      name is anything objects  it is the rest argument
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+VM705:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function show(x,y,z,...args){
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+undefined
+function show(...w, ...args){  // we cannot place more then one Rest Parameters ...name      name is anything objects  it is the rest argument
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+VM760:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function show(...w, ...args){  // we cannot place more then one Rest Parameters ...name      name is anything objects  it is the rest argument
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+VM775:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function show(x,y,z,...args){
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+undefined
+function show(x,y,z,...args){
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+VM795:4 Uncaught SyntaxError: Unexpected end of input
+function show(x,y,z,...args){
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+VM1027:4 Uncaught SyntaxError: Unexpected end of input
+function show(x,y,z,...args){
+    console.log('X is ' x, 'Y is ' , y , 'Z is ' , z , 'Argument is' , args);
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+VM1396:2 Uncaught SyntaxError: missing ) after argument list
+function show2(x,y,z, ...args){
+    console.log('X is ' x, 'Y is ' , y , 'Z is ' , z , 'Argument is' , args);
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+VM1404:2 Uncaught SyntaxError: missing ) after argument list
+function show2(x,y,z, ...args){
+    console.log('X is', x, 'Y is ' , y , 'Z is ' , z , 'Argument is' , args);
+    console.log('Args ', args);
+    console.log(typeof args);
+    console.log('Instance of' , args instanceof Array);
+}
+undefined
+show2(2,3,4,90,22,11111,2222);
+VM1418:2 X is 2 Y is  3 Z is  4 Argument is (4) [90, 22, 11111, 2222]
+VM1418:3 Args  (4) [90, 22, 11111, 2222]
+VM1418:4 object
+VM1418:5 Instance of true
+undefined
+//Rest is used in Functions with the ...three dots 
+//And Spread is used in Objects or arrays with the same ...three dots   
+undefined
+//default arguments in js
+undefined
+function show(x,y){
+    return x+y;
+}
+undefined
+show(30,20);
+50
+show(20);
+NaN
+10 + undefined;
+NaN
+show();
+NaN
+functioin show(x = 0, y=0){
+VM2187:1 Uncaught SyntaxError: Unexpected identifier 'show'
+function show(x = 0, y=0){
+    return x+y;
+}
+undefined
+show();
+0
+show(10);
+10
+SHOE(20,30);
+VM2358:1 Uncaught ReferenceError: SHOE is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2358:1
+show(20,30);
+50
+function disp(x,y);
+VM2440:1 Uncaught SyntaxError: Unexpected token ';'
+function disp(x,y){
+    return x+y;
+}
+undefined
+disp();
+NaN
+//Truthy and Falsy Concept for the above problem
+undefined
+console.dir(...show);
+VM2749:1 Uncaught TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function
+    at <anonymous>:1:9
+(anonymous) @ VM2749:1
+console.dir(show);
+VM2766:1 ƒ show(x = 0, y=0)arguments: nullcaller: nulllength: 0name: "show"prototype: {constructor: ƒ}[[FunctionLocation]]: VM2249:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+//Truthy and Falsy Concept for the above problem
+undefined
+var a;
+undefined
+a;
+undefined
+a?"TRUE":"fALSE";
+'fALSE'
+A=22;
+22
+A;\
+VM2884:1 Uncaught SyntaxError: Invalid or unexpected token
+A;
+22
+a
+undefined
+a;
+undefined
+a=90;
+90
+a?"TRUE":"fALSE";
+'TRUE'
+a="";
+''
+a
+''
+a?"TRUE":"fALSE";
+'fALSE'
+a="Ami";
+'Ami'
+a?"TRUE":"fALSE";
+'TRUE'
+function disp(x,y){
+    x= x||0;
+    y= y||0;
+    return x+y;
+}
+undefined
+disp();
+0
+disp(30,290);
+320
+disp();
+0
+disp(02);
+2

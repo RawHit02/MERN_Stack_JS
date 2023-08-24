@@ -1,0 +1,60 @@
+function show(){
+    console.log("i  am the shw");
+}
+undefined
+show();
+VM1781:2 i  am the shw
+undefined
+function show(){
+    console.log("i  am the shw");
+}
+undefined
+show();//Calling here
+function show(){ //Defined here
+    console.log("i  am the Show");
+}//here comes a concept called HOISTING (place declaration at top) top means at window (it is an root object) both binds as a relation of key value pairs
+VM2213:3 i  am the Show
+undefined
+window.show();
+VM2213:3 i  am the Show
+undefined
+show();
+VM2213:3 i  am the Show
+undefined
+//window is an optional to call like window.show we can use only show()   but it is the internal working of Hoisting here
+undefined
+//2 > Anonyomous Function  / Unnamed function  no nane for the function
+undefined
+//variable can also hold or take function or any reference
+undefined
+var x = function(){
+    console.log("i am invisible func");
+}
+undefined
+typeof x;
+'function'
+x();
+VM3040:2 i am invisible func
+undefined
+var m = function(0{
+VM3121:1 Uncaught SyntaxError: Unexpected number
+m();
+var m = function(){
+    console.log("i am func exp");
+}
+VM3456:1 Uncaught TypeError: m is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM3456:1
+// Hoisting i here but the thing is m is not a function it is undefind due to hoisting var m place at top and then m() call which calls the undefined m and it call error which is m is not a function at 3rd line the declaration is done in function()\
+undefined
+m;
+(3) [10, 20, 30]
+z();
+var z = function(){
+    console.log("i am func exp");
+}
+VM4007:1 Uncaught TypeError: z is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM4007:1
+z;
+undefined

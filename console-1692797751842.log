@@ -1,0 +1,16 @@
+function show(){
+    console.log(arguments.length);
+}
+undefined
+show(213,23);
+VM217:2 2
+undefined
+var addd = (x,y) =>{
+    console.log(x,y);
+    return x+y;
+}
+undefined
+add(32,43);
+VM470:1 Uncaught ReferenceError: add is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM470:1

@@ -1,0 +1,238 @@
+function show(callBackFn){
+    
+VM79:2 Uncaught SyntaxError: Unexpected end of input
+function show(callBackFn){
+    for(var i=1;i<=10;i++){
+    
+VM108:3 Uncaught SyntaxError: Unexpected end of input
+function show(callBackFn){
+    for(var i=1;i<=10;i++){
+        callBackFn(i);
+    }
+}
+    
+undefined
+function cube(num){
+    console.log(num**3);
+}
+undefined
+show(cube);
+VM256:2 1
+VM256:2 8
+VM256:2 27
+VM256:2 64
+VM256:2 125
+VM256:2 216
+VM256:2 343
+VM256:2 512
+VM256:2 729
+VM256:2 1000
+undefined
+//here the show function is calling the HOF(Higer order Function) which is show and inside it we have the callback function where we have putted the cube() function to call the cube properties inside the show function and the value inside the loops of the show function is one by one passing to the cube function and then it is performing its operations using callback function
+undefined
+//Nested Function
+undefined
+function calc(){
+    var add = function(x,y){
+        return x+y;
+    }
+    return add;
+}
+undefined
+var f = calc();
+undefined
+f();
+NaN
+f;
+ƒ (x,y){
+        return x+y;
+    }
+typeof f;
+'function'
+// the above is nested function
+undefined
+f(10,20);
+30
+f()l
+VM1554:1 Uncaught SyntaxError: Unexpected identifier 'l'
+f();
+NaN
+f(231,233);
+464
+// Imperative Statements
+undefined
+var arr =[10,20,30,40,50,40,20,40,40];
+undefined
+var search = 40;
+undefined
+for(var i=0;i<arr.length;i++){
+VM1905:1 Uncaught SyntaxError: Unexpected end of input
+var count =0;
+for(var i=0;i<arr.length;i++){
+    if(arr[i]==search);
+    count++;
+}
+8
+var count =0;
+for(var i=0;i<arr.length;i++){
+    if(arr[i]==search){
+    count++;
+    }
+}
+3
+var count =0;
+for(var i=0;i<=arr.length;i++){
+    if(arr[i]==search){
+    count++;
+    }
+}
+undefined
+count;
+4
+var arr2 =[];
+for(var i=0;i<=arr.length;i++){
+    if(arr[i]==search){
+        arr2.push(arr[i]);
+    }
+}
+undefined
+arr2;
+(4) [40, 40, 40, 40]
+arr2.length;
+4
+arr.filter((e)=>e==40);
+(4) [40, 40, 40, 40]
+//fuilter is a predefined function and doing the same work as in the above code which is Imperative This is Declarative and here it uses the arrow function to work
+undefined
+arr.filter((e)=>e==20)
+(2) [20, 20]
+var g =arr.filter((e)=>e==40);
+undefined
+g;
+(4) [40, 40, 40, 40]
+typeof g;
+'object'
+// Arrow function -> when it is in single line it return like if the code is one linear the e==40 means return e==40;
+undefined
+// if we have one element to find then use find keyword
+undefined
+//Clone in Array
+undefined
+var arr = [20,30,40,50,60];
+undefined
+var e =[...arr];
+undefined
+e;
+(5) [20, 30, 40, 50, 60]
+arr === e;
+false
+//Because both have diffrent address
+undefined
+var f = arr.filter(w=>true);
+undefined
+f;
+(5) [20, 30, 40, 50, 60]
+f===arr
+false
+//same both have diffrent add
+undefined
+arr;
+(5) [20, 30, 40, 50, 60]
+//Filter vs Map
+undefined
+arr;
+(5) [20, 30, 40, 50, 60]
+//lets say these are prices without GST and i have to make same array with GST
+undefined
+arr.map(e=>e+e*0.18);
+(5) [23.6, 35.4, 47.2, 59, 70.8]
+arrr;
+VM4008:1 Uncaught ReferenceError: arrr is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM4008:1
+arr;
+(5) [20, 30, 40, 50, 60]
+//here we have seen that map also makes a new function and put all the elemets with increment of 18% GST on it but it will not impact the original array
+undefined
+arr.map(e=>e*2);
+(5) [40, 60, 80, 100, 120]
+var s=arr.map(e=>e*2);
+undefined
+s;
+(5) [40, 60, 80, 100, 120]
+arr;
+(5) [20, 30, 40, 50, 60]
+// now making duplicate array by map
+undefined
+var h = arr.map(e=>e);
+undefined
+h;
+(5) [20, 30, 40, 50, 60]
+h==arr;
+false
+var prices =[1000,20000,300000.30,4000000.20];
+undefined
+var p = 10000000;
+undefined
+p.toLocaleString('us');
+'10,000,000'
+p.toLocaleString('en');
+'10,000,000'
+p.toLocaleString('fr');
+'10 000 000'
+p.toLocaleString('ja');
+'10,000,000'
+prices;
+(4) [1000, 20000, 300000.3, 4000000.2]
+prices.map(p=>p.toLocaleString('hi'));
+(4) ['1,000', '20,000', '3,00,000.3', '40,00,000.2']
+var formattedprices = prices.map(p=>`Rs ${p.toLocaleString('hi')}`);
+undefined
+prices;
+(4) [1000, 20000, 300000.3, 4000000.2]
+formattedprices;
+(4) ['Rs 1,000', 'Rs 20,000', 'Rs 3,00,000.3', 'Rs 40,00,000.2']
+// They are immutable also because not disturbing the original values
+undefined
+//both map and filter are immutable
+undefined
+// map vs filter -> we can format in map according to the region like 'hi' , 'us' , 'en' etc.. 
+undefined
+// Instead of Spread Operator ...(anyname) of object we have map and filter to clone any array or objects
+undefined
+//forEach method
+undefined
+var arr = [20,10,30,40,50,10];
+undefined
+arr.forEach(e=>console.log(e))
+VM6117:1 20
+VM6117:1 10
+VM6117:1 30
+VM6117:1 40
+VM6117:1 50
+VM6117:1 10
+undefined
+typeof forEach;
+'undefined'
+//forEach is a type of Null Function which not return anything
+undefined
+arr.forEach((element,index)=>console.log(element,index));
+VM6547:1 20 0
+VM6547:1 10 1
+VM6547:1 30 2
+VM6547:1 40 3
+VM6547:1 50 4
+VM6547:1 10 5
+undefined
+arr.forEach((element,index,a)=>console.log(element,index,a));
+VM6567:1 20 0 (6) [20, 10, 30, 40, 50, 10]
+VM6567:1 10 1 (6) [20, 10, 30, 40, 50, 10]
+VM6567:1 30 2 (6) [20, 10, 30, 40, 50, 10]
+VM6567:1 40 3 (6) [20, 10, 30, 40, 50, 10]
+VM6567:1 50 4 (6) [20, 10, 30, 40, 50, 10]
+VM6567:1 10 5 (6) [20, 10, 30, 40, 50, 10]
+undefined
+// a - > means array hn
+undefined
+//forEach is basically used for traversal
+undefined

@@ -1,0 +1,63 @@
+//For  vs  forof  vs  forin
+undefined
+var arr= [20,40,21,44,23];
+undefined
+for(var i=0 ; var<arr.length;i++){
+VM247:1 Uncaught SyntaxError: Unexpected token 'var'
+for(var i=0 ; i<arr.length;i++){
+    console.log(arr[i]);
+}
+VM344:2 20
+VM344:2 40
+VM344:2 21
+VM344:2 44
+VM344:2 23
+undefined
+// for of
+undefined
+//
+undefined
+// for of
+undefined
+// for of  (Iterator)
+undefined
+for(var a of arr){
+    console.log(a);
+}
+VM519:2 20
+VM519:2 40
+VM519:2 21
+VM519:2 44
+VM519:2 23
+undefined
+// for in (object traverse)
+undefined
+typeof(arr);
+'object'
+for(var key in arr){
+    console.log(key);
+}
+VM742:2 0
+VM742:2 1
+VM742:2 2
+VM742:2 3
+VM742:2 4
+undefined
+for(var key in arr){
+    console.log(key,arr[key]);
+}
+VM782:2 0 20
+VM782:2 1 40
+VM782:2 2 21
+VM782:2 3 44
+VM782:2 4 23
+undefined
+var emp = {id:200, name:'rohit',add:'dun'};
+undefined
+for(var key in emp){
+    console.log(key,emp[key]);
+}
+VM1075:2 id 200
+VM1075:2 name rohit
+VM1075:2 add dun
+undefined
