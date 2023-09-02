@@ -1,0 +1,105 @@
+//OOJS (object oriented javascript)
+undefined
+var arr;
+undefined
+typeof arr;
+'undefined'
+var arr = [];
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+var obj = {};
+undefined
+typeof onj;
+'undefined'
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+arr instanceof Array;
+true
+arr instanceof Object;;
+true
+var amit = {id:1001,name:'rohit',address:'Dehradun'};
+undefined
+typeof rohit;
+'undefined'
+typeof amit;
+'object'
+var soo = {id:10001, name:'rohit'};
+undefined
+function createPerson(id,name,city){
+    var person={};
+    person.id = 1001;
+    person.name = 'Rohit';
+    person.city ="Doon";
+    return person;
+}
+undefined
+amit;
+{id: 1001, name: 'rohit', address: 'Dehradun'}
+var tim = createPerson(2000,'ROHIT','DOON');
+undefined
+tim;
+{id: 1001, name: 'Rohit', city: 'Doon'}
+function createPerson(id,name,city){
+    var person={};
+    person.id = id;
+    person.name = name;
+    person.city = city;
+    return person;
+}
+undefined
+var time = createPerson(2000,'ROHIIT','DDOON');
+undefined
+time
+{id: 2000, name: 'ROHIIT', city: 'DDOON'}
+typeof time;
+'object'
+typeof tim;
+'object'
+typeof amit;
+'object'
+amit instanceof createPerson;
+false
+time instanceof createPerson;
+false
+tim instanceof createPerson;
+false
+tim instanceof Object;
+true
+time instanceof Object;
+true
+mit instanceof Object;
+VM1497:1 Uncaught ReferenceError: mit is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1497:1
+amit instanceof Object;
+true
+//Function Constructor
+function Person(id,name,city){
+    //This - keyword(current calling object reference)
+    this.id = id;
+    this.name = name;
+    this.city = city;
+}
+var tom = new Person(1001,'Tom', 'Mumbai');
+undefined
+amit
+{id: 1001, name: 'rohit', address: 'Dehradun'}
+tom
+Person {id: 1001, name: 'Tom', city: 'Mumbai'}
+amit instanceof createPerson;
+false
+amit instanceof Object;
+true
+tom instanceof Person;
+true
+tom instanceof Object;
+true

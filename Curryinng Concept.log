@@ -1,0 +1,23 @@
+// What is Curry In JS
+undefined
+function mix(oil){
+    return function(veg);
+VM164:2 Uncaught SyntaxError: Unexpected token ';'
+function mix(oil){
+    return function(veg){
+        return function(topp){
+            return "Final res" + oil + " " + veg + " " + topp;
+        }
+    }
+}
+undefined
+mix("cocunut")("bringle")("cherry");
+'Final rescocunut bringle cherry'
+// here the mix added with the closure of veg and the veg is adding closure of topp 
+undefined
+//so here the mix() is the total function which have all nested function returned inside that 
+undefined
+//Currying -> is a transformation of function that translates a function from callable as f(a,b,c) into callable as f(a)(b)(c) Currying doesnt call a function it just transforms it.
+undefined
+//
+undefined

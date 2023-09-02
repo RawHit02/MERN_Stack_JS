@@ -1,0 +1,25 @@
+
+var cache={};
+function cube(num){
+    if(cache[num]){
+        return cache[num];
+    }
+    for(let i=1;i<=10000;i++){
+        for(let j=1;j<=1000;j++){
+            
+        }
+    }
+    cache[num] = num**3;
+    return cache[num];
+}
+undefined
+cube(3);
+27
+cube(3);
+27
+cube(9);
+729
+cube(9)
+729
+
+//we have used cache here because if a number will come first time it will get stored in the cache and then when we again search for that number it take no time to show output so we used cache here but if a new number comes take time to compute like here if we first calculate cube(3) it takes time to get 27 but afer that if we again tru cube(3) it will take noi time for the result to compute because it take previous cache result used before to cslculate the same but if we do cube(9) it will take time and then same viceversa

@@ -1,0 +1,22 @@
+//MEMOIZATION
+undefined
+//it is an optimisation technique that speeds up applications by storing the results of expensive fnction calls and returning the catched result when the same inputs occur again
+undefined
+function cube(num){
+    return num**3;
+}
+undefined
+function cube(num){
+    return num**3;
+}
+undefined
+function cube(num){
+    for(let i=1;i<=100000;i++){
+        for(let j=1;j<=10000;j++){
+        }
+    }
+    return num**3;
+}
+undefined
+cube(3);
+27

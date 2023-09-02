@@ -1,0 +1,103 @@
+//OOJS 2
+undefined
+var arr = [1,3,4,32];
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typrof Array;
+VM282:1 Uncaught SyntaxError: Unexpected identifier 'Array'
+var o ={};
+undefined
+typrof o;
+VM336:1 Uncaught SyntaxError: Unexpected identifier 'o'
+typeof o;
+'object'
+o instanceof Array;
+false
+o instanceof Object;
+true
+var em = {id:2112,name:'rohit'};
+undefined
+var em2 = {id:21,name:'roooo'};
+undefined
+function createEmp(id , name){
+    var e={};
+    e.id = id;
+    e.name = name;
+    return e;
+}
+undefined
+createE
+VM715:1 Uncaught ReferenceError: createE is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM715:1
+createEmp(23122,"rohit");
+{id: 23122, name: 'rohit'}
+var mohan = createEmp(1213,'sofdps');
+undefined
+mohan insta
+VM888:1 Uncaught SyntaxError: Unexpected identifier 'insta'
+mohan instanceof createEmp;
+false
+mohan instanceof Object;
+true
+typeof Object;
+'function'
+//{} this is not a function it is count under Onject
+undefined
+// New -> keyword for Dynamic Memory
+undefined
+function em(id,name,city){
+    //this ->ccor
+//99.id
+this.id = id;
+    this.name = name;
+    this.city = city;
+}
+undefined
+var emp = new em(923019,'rohit','doon');
+undefined
+emp
+em {id: 923019, name: 'rohit', city: 'doon'}
+emp instanceof em
+true
+mohan
+{id: 1213, name: 'sofdps'}
+mohan instanceof Object;
+true
+emp instanceof Object;
+true
+// new -> we create object of Specific Type
+undefined
+// {} -> we create Object of Literals Style
+undefined
+em.prototype
+{constructor: ƒ}
+Array.prototype
+[constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+Array.prototype.forEach;
+ƒ forEach() { [native code] }
+Array.prototype.map;
+ƒ map() { [native code] }
+Array.prototype.find;
+ƒ find() { [native code] }
+typeof Array;
+'function'
+typeof Array.prototype;
+'object'
+arr.__proto__;
+[constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+//1> what is __proto__ ?
+undefined
+//  1> what is __proto__ ?
+//  2> What is prototype ?
+//  3> __proto__ vs prototype ?
+//  4> function Constructor Vs class
+// IMP** Questions
+undefined
+arr.__proto__=== Array.prototype;
+true
+Array.prototype.__proto__=== Object.prototype;
+true
