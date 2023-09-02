@@ -1,0 +1,137 @@
+var arr = [1,2,3,4,5,6,22,434];
+undefined
+arr.splice(1,1000);
+(7) [2, 3, 4, 5, 6, 22, 434]
+arr;
+[1]
+// arr remains only with 1 element i.e, at 0th index 
+undefined
+arr.insert;
+undefined
+Array.prototype.forEach;
+ƒ forEach() { [native code] }
+typeof Array.prototype;
+'object'
+//Array have Prototype and that prootype stores the many methods inside it like push , pop, foreach etc...
+Array.prototype.insert = function(index,value){
+VM334:2 Uncaught SyntaxError: Unexpected end of input
+Array.prototype.push;
+ƒ push() { [native code] }
+Array.prototype.pop;
+ƒ pop() { [native code] }
+Array.prototype.alice;
+undefined
+Array.prototype.slice;
+ƒ slice() { [native code] }
+Array.prototype.sortlice;
+undefined
+Array.prototype.sort;
+ƒ sort() { [native code] }
+// and many many methods inside it in prototype
+undefined
+//Prototype is an OBJECT 
+undefined
+typeof Array.prototype
+'object'
+// Now Comes THIS -> it a Keyword that contains current calling Object Reference
+undefined
+typeof this;
+'object'
+Array.prototype.insert = function(index,value){
+    this.splice(index,0,value);
+    return this.length;
+}
+ƒ (index,value){
+    this.splice(index,0,value);
+    return this.length;
+}
+var arr = [20,30,40,2,3,4,6,77];
+undefined
+arr.insert(1,1000);
+9
+arr;
+(9) [20, 1000, 30, 40, 2, 3, 4, 6, 77]
+Array.prototype.replace = function(index,newvalue){
+    this.splice(index,1,newvalue);
+    retuen this.length;
+VM1022:3 Uncaught SyntaxError: Unexpected token 'this'
+Array.prototype.replace = function(index,newvalue){
+    this.splice(index,1,newvalue);
+    return this.length;}
+ƒ (index,newvalue){
+    this.splice(index,1,newvalue);
+    return this.length;}
+arr.replace(1,2000);
+9
+arr;
+(9) [20, 2000, 30, 40, 2, 3, 4, 6, 77]
+Array.prototype.replace = function(index,newvalue){
+    this.splice(index,1,newvalue);
+    return this.length;
+    return "replacing done";}
+ƒ (index,newvalue){
+    this.splice(index,1,newvalue);
+    return this.length;
+    return "replacing done";}
+arr;
+(9) [20, 2000, 30, 40, 2, 3, 4, 6, 77]
+arr.replace(0,9000,1000);
+9
+arr
+(9) [9000, 2000, 30, 40, 2, 3, 4, 6, 77]
+Array.prototype.replace = function(index,newvalue){
+    this.splice(index,1,newvalue,newvalue);
+    return this.length;
+    return "replacing done";}
+ƒ (index,newvalue){
+    this.splice(index,1,newvalue,newvalue);
+    return this.length;
+    return "replacing done";}
+arr
+(9) [9000, 2000, 30, 40, 2, 3, 4, 6, 77]
+arr.replace(0,3000,1000);
+10
+arr
+(10) [3000, 3000, 2000, 30, 40, 2, 3, 4, 6, 77]
+Array.prototype.replace = function(index,newvalue,newvalue){
+    this.splice(index,1,newvalue,newvalue);
+    return this.length;
+    return "replacing done";}
+ƒ (index,newvalue,newvalue){
+    this.splice(index,1,newvalue,newvalue);
+    return this.length;
+    return "replacing done";}
+arr
+(10) [3000, 3000, 2000, 30, 40, 2, 3, 4, 6, 77]
+arr.replace(0,100,120);
+11
+arr
+(11) [120, 120, 3000, 2000, 30, 40, 2, 3, 4, 6, 77]
+//here we found that it will only replace the first value and only put one value we cannot put multiple values here to extend the array like in splice 
+undefined
+arr.replace(3,900000);
+12
+arr;
+(12) [120, 120, 3000, undefined, undefined, 30, 40, 2, 3, 4, 6, 77]
+arr.foreach(){
+VM1582:1 Uncaught SyntaxError: Unexpected token '{'
+Array.prototype.forEach = function(){
+    console.log("this is my foreach");
+}
+ƒ (){
+    console.log("this is my foreach");
+}
+arr.foreach();
+VM1727:1 Uncaught TypeError: arr.foreach is not a function
+    at <anonymous>:1:5
+(anonymous) @ VM1727:1
+arr.forEach();
+VM1704:2 this is my foreach
+undefined
+//here we have noticed that the array previous methods get lost somewheere and on the same array we get the foreach function here 
+undefined
+var arr1 = [1,2,3,4,5,6,7,8,9];
+undefined
+arr1.forEach(e=>console.log(e));
+VM1704:2 this is my foreach
+undefined

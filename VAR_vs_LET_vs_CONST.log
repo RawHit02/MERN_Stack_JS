@@ -1,0 +1,219 @@
+//      Let VS Var  VS Const
+undefined
+function show(){
+    if(10>2){
+        var e =10;
+    }
+    console.log(e);
+}
+undefined
+show();
+VM158:5 10
+undefined
+//here Hoisting takes place Hoisting means  DECLARATION AT TOP  when we have declare var e inside the function then it checks the condition 10>2 it is true and the var get hoisted to the top of the function and then only inside the function it becomes ASSAIGNMENT only
+undefined
+function show(){
+    //var e; //Hoisting
+    console.log("E is", e);  //Undefined
+    if(10>2){
+        var e =10; // e=10;
+    }
+    console.log(e);
+}
+undefined
+show();
+VM590:3 E is undefined
+VM590:7 10
+undefined
+//so there is no block level scope
+undefined
+function show(){
+    console.log("E is", e);  //Undefined
+    if(10>2){
+        var e =10; // e=10;
+    }
+    console.log(e);
+}
+undefined
+function show(){
+    console.log("E is", e);  //Undefined
+    var e =20;
+    console.log("E is ", e); //20
+    if(10>2){
+        var e =10; // e=10;
+        console.log("E is ",e);  //10
+    }
+    console.log(e);
+}
+undefined
+function show(){
+    console.log("E is", e);  //Undefined
+    var e =20;
+    console.log("E is ", e); //20
+    if(10>2){
+        var e =10; // e=10;
+        console.log("E is ",e);  //10
+    }
+    var e =30;
+    console.log(e);  //30
+}
+undefined
+show();
+VM710:2 E is undefined
+VM710:4 E is  20
+VM710:7 E is  10
+VM710:10 30
+undefined
+// here var is only hoisted or Declared Once at the var e =20 line after that var is only assaigned so var is only Declared once at first when it used it is declared then after that if we use var it is only initialized
+undefined
+//
+undefined
+//
+undefined
+//Now Using Let
+
+undefined
+
+
+
+
+
+undefined
+
+
+undefined
+//Using Let
+
+undefined
+//-> Block Level Scope
+//-> Redeclaration the same variable in same function/block generates Syntax Error
+//-> TDZ (Temporal Dead Zone)
+//-> Different let in different
+undefined
+function show(){
+    if(10>2){
+        console.log("E is",e); //Error
+        let e = 10; //e=10
+        console.log("E is ",e);  //10
+    }
+    console.log(e);
+}
+undefined
+show();
+VM1410:3 Uncaught ReferenceError: Cannot access 'e' before initialization
+    at show (<anonymous>:3:28)
+    at <anonymous>:1:1
+show @ VM1410:3
+(anonymous) @ VM1426:1
+//showing error due to block level of Let it only see its values from the line of execution insode the funtion only
+undefined
+function show(){
+    if(10>2){
+        //console.log("E is",e); //Error
+        let e = 10; //e=10
+        console.log("E is ",e);  //10
+    }
+    console.log(e);
+}
+undefined
+show();
+VM1590:5 E is  10
+VM1590:7 Uncaught ReferenceError: e is not defined
+    at show (<anonymous>:7:17)
+    at <anonymous>:1:1
+show @ VM1590:7
+(anonymous) @ VM1605:1
+// Let only works on the block level scope and inside the boundry only
+undefined
+//it not works on Temporal dead zones
+undefined
+//Here let can be Redaclare but only at once like here
+function show(){
+    let e = 20; //e=20
+        console.log("E is ",e);  //20
+    if(10>2){
+        //console.log("E is",e); //Error
+        let e = 10; //e=10
+        console.log("E is ",e);  //10
+    }
+    console.log(e);
+}
+undefined
+show();
+VM1768:4 E is  20
+VM1768:8 E is  10
+VM1768:10 20
+undefined
+//Here let can be Redaclare not more then one
+function show(){
+    let e = 20; //e=20
+        console.log("E is ",e);  //20
+    if(10>2){
+        //console.log("E is",e); //Error
+        let e = 10; //e=10
+        console.log("E is ",e);  //10
+    }
+    let e =300;//declared more then one
+    console.log(e);//error
+}
+VM1791:10 Uncaught SyntaxError: Identifier 'e' has already been declared
+//Let is not global but where from it declared after that it can be accessible
+undefined
+//TDZ -> temporal dead zone -> this zone comes before the initialization of let and const 
+undefined
+let and const variable exist in the TDZ from the start of their enclosing scope until they are declared
+VM2104:1 Uncaught SyntaxError: Unexpected token 'const'
+//let and const variable exist in the TDZ from the start of their enclosing scope until they are declared
+undefined
+let s =100;
+undefined
+window.r;
+undefined
+window.s;
+undefined
+s;
+100
+//let cannot works with window due to declaration and TDZ
+undefined
+// CONST
+undefined
+const MAX =200;
+undefined
+MAX++;
+VM2264:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM2264:1
+MAX =300;
+VM2280:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM2280:1
+//Redeclaration not allowed
+undefined
+const obj  = {id:200,name:'Ram'}
+undefined
+obj={};
+VM2376:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM2376:1
+obj.id++;
+200
+obj.id++;
+201
+obj.id++;
+202
+// as we know it array uses address so when we are doing ++ it is doing in Inside it not in Address 
+undefined
+//but if we try to change the address it will give error;
+undefined
+const arr = [1,3,4,5,23];
+undefined
+arr[0] =222;
+222
+arr;
+(5) [222, 3, 4, 5, 23]
+arr=[2,3,45,65452,2322];
+VM2689:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM2689:1
+//Const -> here we are trying to reinitialize the array in same address arr so then it is showing error
+undefined

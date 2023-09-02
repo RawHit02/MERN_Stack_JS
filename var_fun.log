@@ -1,0 +1,82 @@
+//IIFE
+undefined
+//IIFE -> Immediate Invoke Function Expression   OR     Self Invoking Function'
+undefined
+function(){
+VM154:1 Uncaught SyntaxError: Function statements require a function name
+function(){
+    
+}
+VM157:1 Uncaught SyntaxError: Function statements require a function name
+(function(){
+    console.log("rohit");
+    })();
+VM241:2 rohit
+undefined
+var g = (function(){
+    int count=0;
+VM296:2 Uncaught SyntaxError: Unexpected identifier 'count'
+var g = (function(){
+    int count=0;
+    function counter(){
+VM321:2 Uncaught SyntaxError: Unexpected identifier 'count'
+var g = (function(){
+    var count=0;
+    function counter(){
+        count++;
+        return count;
+    }
+    return counter;
+})();
+undefined
+g;
+ƒ counter(){
+        count++;
+        return count;
+    }
+g();
+1
+g();
+2
+g();
+3
+g();\
+VM438:1 Uncaught SyntaxError: Invalid or unexpected token
+g();
+4
+g();
+5
+g();
+6
+t=g();
+7
+t();
+VM472:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM472:1
+t() = g();
+VM491:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM491:1
+var t= g();
+undefined
+t;
+8
+t;
+8
+t;
+8
+t;
+8
+t;
+8
+t();
+VM546:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM546:1
+let and IFE is a block level scope
+VM598:1 Uncaught SyntaxError: Unexpected identifier 'IFE'
+??let and IFE is a block level scope
+VM600:1 Uncaught SyntaxError: Unexpected token '??'
+//let and IFE is a block level scope
+undefined

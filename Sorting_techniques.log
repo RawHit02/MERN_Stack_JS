@@ -1,0 +1,54 @@
+//Sort
+undefined
+var arr = [1,2,9,38,545,67,7432,2];
+undefined
+// sort() do sorting acc to the ASCII value
+undefined
+arr.sort();
+(8) [1, 2, 2, 38, 545, 67, 7432, 9]
+//Sorting According to Real Sort 
+undefined
+arr.sort((a,b)=>a-b);
+(8) [1, 2, 2, 9, 38, 67, 545, 7432]
+//Above is the Ascending Sort
+undefined
+//Below is the Descending Sort
+undefined
+arr.sort((a,b)=>b-a);
+(8) [7432, 545, 67, 38, 9, 2, 2, 1]
+var names = ["ram","amit","tim","shyam"];
+undefined
+"ram".localeCompare("amit");
+1
+"amit".localeCompare("ram")
+-1
+"amit".localeCompare("amit")
+0
+names.sort((a,b)=>a.localeCompare(b));
+(4) ['amit', 'ram', 'shyam', 'tim']
+//Above is the Ascending Order Of Stringd
+undefined
+How to compareStrings in Descending Order
+VM1963:1 Uncaught SyntaxError: Unexpected identifier 'to'
+//How to compareStrings in Descending Order
+undefined
+names.sort((a,b)=>b.localeCompare(a));
+(4) ['tim', 'shyam', 'ram', 'amit']
+var products = [{id:1001,name:'Adidas',price : 3000},{id:200,name:},{}]
+VM2092:1 Uncaught SyntaxError: Unexpected token '}'
+var products = [{id:1001,name:'Adidas',price : 3000},{id:200,name:'Puma',price:2322},{id:9000,name:'Bata',price:4000}];
+undefined
+products.sort((a,b)=>a.name.localeCompare(b.name));
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Adidas', price: 3000}1: {id: 9000, name: 'Bata', price: 4000}2: {id: 200, name: 'Puma', price: 2322}length: 3[[Prototype]]: Array(0)
+products.sort((a,b)=>a.price- b.price);
+(3) [{…}, {…}, {…}]0: {id: 200, name: 'Puma', price: 2322}1: {id: 1001, name: 'Adidas', price: 3000}2: {id: 9000, name: 'Bata', price: 4000}length: 3[[Prototype]]: Array(0)
+products.sort((a,b)=>a.id- b.id);
+(3) [{…}, {…}, {…}]0: {id: 200, name: 'Puma', price: 2322}1: {id: 1001, name: 'Adidas', price: 3000}2: {id: 9000, name: 'Bata', price: 4000}length: 3[[Prototype]]: Array(0)
+//Diffrent Techniques of Sorting Used in Arrays of Key value pairs 
+undefined
+//Above is the example
+undefined
+//in JS we use These types of Inbuilt Methods to sort any objects or arrays
+undefined
+var arr =[10,20,1,2,90,33,88];
+undefined

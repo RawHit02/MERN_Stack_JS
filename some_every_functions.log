@@ -1,0 +1,12 @@
+//Some vs Every Function in Array
+undefined
+var arr = [10,20,30,4,5,6,1,99];
+undefined
+arr.every(e=>e>0);
+true
+arr.every(e=>e>10);
+false
+arr.some(e=>e>10);
+true
+arr.some(e=>e>100000);
+false

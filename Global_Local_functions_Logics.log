@@ -1,0 +1,143 @@
+//How to prevent Global Variables in JS
+undefined
+//  1> it is always in the memory
+undefined
+//Counter Function
+undefined
+function counter(){
+    var count =0;
+    count++;
+    return count;
+}
+undefined
+counter();
+1
+countrt();
+VM260:1 Uncaught ReferenceError: countrt is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM260:1
+counter()
+1
+counter()
+1
+counter()
+1
+counter()
+1
+ var count =0; //Making it Global
+function counter(){
+    count++;
+    return count;
+}
+undefined
+counter()
+1
+counter()
+2
+counter()
+3
+counter()
+4
+counter()
+5
+counter()
+6
+window.count;
+6
+count ="rohit";
+'rohit'
+counter();
+NaN
+//We have change the global variable anyone can change them so it is dangerous
+//how to prevent from it 
+undefined
+count++;
+NaN
+function init(){
+var count =0; 
+function counter(){
+    count++;
+    return count;
+}
+    return counter;
+}
+undefined
+init();
+ƒ counter(){
+    count++;
+    return count;
+}
+//init() goes to the callstack and take the count and counter with itself and then after when it called init get destroyed but returns the counter or any functions inside it
+undefined
+var t = init();
+undefined
+t;
+ƒ counter(){
+    count++;
+    return count;
+}
+t();
+1
+t();
+2
+t();
+3
+t();
+4
+t();
+5
+// when we declare the t the t get the init() and the variables and functions inside it and then after the init() get destroyed and the counter function are captured by the t and then t() returns the values done inside the init() because it is in its memory so he recalls the function that i have the power of init();
+undefined
+console.dir(t);
+VM1236:1 ƒ counter()arguments: nullcaller: nulllength: 0name: "counter"prototype: {constructor: ƒ}[[FunctionLocation]]: VM498:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (init) {count: 5}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+function show(y){
+    var z=100;
+    var m =200;
+    return function(x){
+        var a=10;
+        return a+x+y;
+    }
+}
+undefined
+show(100);
+ƒ (x){
+        var a=10;
+        return a+x+y;
+    }
+var t = show(100);
+undefined
+t(1);
+111
+//100+10+1
+undefined
+console.dir(t);
+VM1485:1 ƒ anonymous(x)arguments: nullcaller: nulllength: 1name: ""prototype: {constructor: ƒ}[[FunctionLocation]]: VM1354:4[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (show) {y: 100}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+//scope contains only y value and it is revolving asround that 
+undefined
+
+function a(x){
+    var g =100;
+    return function b(y){
+        return function c(z){
+            return x+y+z;
+        }
+    }
+}
+undefined
+a(10)(20)(30);
+60
+var m = a(10)(20);
+undefined
+m;
+ƒ c(z){
+            return x+y+z;
+        }
+console.dir(m);
+VM1835:1 ƒ c(z)arguments: nullcaller: nulllength: 1name: "c"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1756:4[[Prototype]]: ƒ ()[[Scopes]]: Scopes[3]0: Closure (b) {y: 20}1: Closure (a) {x: 10}2: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+//here we learned that the c function have the lexical scope functions a and b values in it so it have access of these not any other variable like g could not access c function
+undefined
+//Closure = Function return +Lexical Scope functtions + used variable inside them
+undefined
