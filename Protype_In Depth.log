@@ -1,0 +1,269 @@
+//OOJS
+//Generic Object
+undefined
+var obj = {id:101, name:'Ram', city:'Delhi'};
+undefined
+typeof obj;
+'object'
+obj instanceof Object;
+true
+typeof Object;
+'function'
+function create(id,name,slary){
+    var emp={};
+    emp.id = id;
+    emp.name = name;
+    emp.salary = slary;
+    return emp;
+}
+undefined
+var ram= create(23000,'rohit',3213223);
+undefined
+ram;
+{id: 23000, name: 'rohit', salary: 3213223}
+typeof ram;
+'object'
+//problem is here that it is belonging to the object only as it is a Genric type
+undefined
+ram instanceof Onject;
+VM612:1 Uncaught ReferenceError: Onject is not defined
+    at <anonymous>:1:16
+(anonymous) @ VM612:1
+ram instanceof Object;
+true
+ram instanceof create;
+false
+var shyam= create(23000,'shy',3213223);
+undefined
+shyam
+{id: 23000, name: 'shy', salary: 3213223}
+var tom= create(23000,'tom',3213223);
+undefined
+tom
+{id: 23000, name: 'tom', salary: 3213223}
+//All these objects are of generic type so they are objects type not specific type 
+undefined
+//OOPS
+//Specific Objects
+undefined
+function person(id , name , age){
+
+}
+undefined
+function person(id , name , age){
+    console.log('person', this);
+}
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1034:2 person person {}
+undefined
+tim instanceof person
+true
+tim instanceof Object
+true
+function person(id , name , age){
+    console.log('person', this);
+    //this - keyword of current calling object reference type
+}
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1109:2 person person {}[[Prototype]]: Object
+undefined
+function person(id , name , age){
+    console.log('person', this);
+    //this - keyword of current calling object reference type
+    //the person is write not empty
+}
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1112:2 person person {}
+undefined
+//Now filling the new object person
+undefined
+function person(id , name , age){
+    console.log('person', this);
+    this.id=is;
+}
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1160:2 person person {}
+VM1160:3 Uncaught ReferenceError: is is not defined
+    at new person (<anonymous>:3:13)
+    at <anonymous>:5:11
+person @ VM1160:3
+(anonymous) @ VM1160:5
+//Function Constructor
+function person(id , name , age){
+    console.log('person', this);
+    this.id=id;
+    this.name=name;
+    this.age = age;
+     console.log('Person with Values', this);
+}
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1167:3 person person {}
+VM1167:7 Person with Values person {id: 10001, name: 'tim', age: 33}age: 33id: 10001name: "tim"[[Prototype]]: Object
+undefined
+//Generic -> it means mixture of diffrent things
+// Specifice -> it means specific type of thing
+undefined
+//Prototype
+undefined
+//What is Prototype
+undefined
+//Function Constructor
+function person(id , name , age){
+    console.log('person', this);
+    this.id=id;
+    this.name=name;
+    this.age = age;
+     console.log('Person with Values', this);
+}
+var toim = new person(1231,'toim',33);
+var kim = new person(1341,'kin',33);
+var tim = new person(10001,'tim',33); // new for creating a new onject in the memory of person type
+VM1410:3 person person {}
+VM1410:7 Person with Values person {id: 1231, name: 'toim', age: 33}
+VM1410:3 person person {}
+VM1410:7 Person with Values person {id: 1341, name: 'kin', age: 33}
+VM1410:3 person person {}
+VM1410:7 Person with Values person {id: 10001, name: 'tim', age: 33}
+undefined
+tom
+{id: 23000, name: 'tom', salary: 3213223}
+kim
+person {id: 1341, name: 'kin', age: 33}
+tim
+person {id: 10001, name: 'tim', age: 33}
+toim
+person {id: 1231, name: 'toim', age: 33}
+
+function Cust(id , name , age){
+    this.id=id;
+    this.name=name;
+    this.age = age;
+    this.printCust = function(){
+     console.log(`Id is ${this.id} Name ${this.name} Balance ${this.balance}`);
+}
+}
+undefined
+
+function Cust(id , name , age){
+    this.id=id;
+    this.name=name;
+    this.age = age;
+    this.printCust = function(){
+     console.log(`Id is ${this.id} Name ${this.name} Age ${this.age}`);
+}
+}
+undefined
+var tom = new Cust(1231,'tom',32);
+var kim = new Cust(1341,'kin',31);
+var tim = new Cust(10001,'tim',34); 
+undefined
+tom
+Cust {id: 1231, name: 'tom', age: 32, printCust: ƒ}
+kim
+Cust {id: 1341, name: 'kin', age: 31, printCust: ƒ}
+tim
+Cust {id: 10001, name: 'tim', age: 34, printCust: ƒ}
+tom.printCust();
+VM1516:7 Id is 1231 Name tom Age 32
+undefined
+tim.printCust();
+VM1516:7 Id is 10001 Name tim Age 34
+undefined
+kim.printCust();
+VM1516:7 Id is 1341 Name kin Age 31
+undefined
+//Here we can see that we have a printCust() that is initializing on each case for the same  this function taking memory again and again
+undefined
+Customer;
+VM1774:1 Uncaught ReferenceError: Customer is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1774:1
+Cust;
+ƒ Cust(id , name , age){
+    this.id=id;
+    this.name=name;
+    this.age = age;
+    this.printCust = function(){
+     console.log(`Id is ${this.id} Name ${this.name} Age ${this.age}`);
+}
+}
+Cust.prototype
+{constructor: ƒ}
+typeof Cust.prototype
+'object'
+typeof Cust.prototype instanceof Object
+false
+Cust.prototype instanceof Object
+true
+tom
+Cust {id: 1231, name: 'tom', age: 32, printCust: ƒ}
+tim
+Cust {id: 10001, name: 'tim', age: 34, printCust: ƒ}
+kim
+Cust {id: 1341, name: 'kin', age: 31, printCust: ƒ}
+tom.__proto__ === tim.__proto__ && tim.__proto__ === kim.__proto__;
+true
+Cust.prototype.show = function(){
+    console.log(`Id is ${this.id} Name ${this.name} Balance ${this.balance}`);}
+ƒ (){
+    console.log(`Id is ${this.id} Name ${this.name} Balance ${this.balance}`);}
+tom.show();
+VM2139:2 Id is 1231 Name tom Balance undefined
+undefined
+tim.show();
+VM2139:2 Id is 10001 Name tim Balance undefined
+undefined
+kim.show();
+VM2139:2 Id is 1341 Name kin Balance undefined
+undefined
+tim.__proto__;
+{show: ƒ, constructor: ƒ}
+tim.__proto__ === Cust.prototype;
+true
+tim.__proto__.show;
+ƒ (){
+    console.log(`Id is ${this.id} Name ${this.name} Balance ${this.balance}`);}
+tim.__proto__.show();
+VM2139:2 Id is undefined Name undefined Balance undefined
+undefined
+tom.show();
+VM2139:2 Id is 1231 Name tom Balance undefined
+undefined
+//We can go from proto to prototype
+undefined
+tim.__proto__.show();
+VM2139:2 Id is undefined Name undefined Balance undefined
+undefined
+tim.__proto__.show.call(tim);
+VM2139:2 Id is 10001 Name tim Balance undefined
+undefined
+tim.show();
+VM2139:2 Id is 10001 Name tim Balance undefined
+undefined
+Cust.prototype.show = function(){
+    console.log(`Id is ${this.id} Name ${this.name} Age ${this.age}`);}
+ƒ (){
+    console.log(`Id is ${this.id} Name ${this.name} Age ${this.age}`);}
+tom.show();
+VM2366:2 Id is 1231 Name tom Age 32
+undefined
+tim.show();
+VM2366:2 Id is 10001 Name tim Age 34
+undefined
+tim.__proto__.show.call(tim);
+VM2366:2 Id is 10001 Name tim Age 34
+undefined
+tim.show();
+VM2366:2 Id is 10001 Name tim Age 34
+undefined
+tim.__proto__.show();
+VM2366:2 Id is undefined Name undefined Age undefined
+undefined
+tim.__proto__ === Cust.prototype;
+true
+tim.__proto__.show();
+VM2366:2 Id is undefined Name undefined Age undefined
+undefined
+tim.__proto__.show;
+ƒ (){
+    console.log(`Id is ${this.id} Name ${this.name} Age ${this.age}`);}

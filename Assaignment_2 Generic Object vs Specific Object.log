@@ -1,0 +1,191 @@
+//Specific Objects (Object Literal Approach):
+// Specific objects are created directly with their properties and methods defined within each object.
+// They are suitable for scenarios where you need a small number of objects with unique characteristics.
+// Each object has its own set of methods and properties.
+// This approach can lead to duplication of methods in memory for each object, which can be inefficient if you have many objects.
+undefined
+// Creating student objects using Object Literal
+var student1 = {
+  rollno: 101,
+  name: "Alice",
+  age: 20,
+  marks: [85, 90, 78],
+  totalMarks: function () {
+    return this.marks.reduce((acc, cur) => acc + cur, 0);
+  },
+  grade: function () {
+    var total = this.totalMarks();
+    var percentage = total / 3;
+
+    if (percentage >= 90) {
+      return "A+";
+    } else if (percentage >= 80) {
+      return "A";
+    } else if (percentage >= 70) {
+      return "B";
+    } else if (percentage >= 60) {
+      return "C";
+    } else {
+      return "F";
+    }
+  },
+};
+
+undefined
+var student2 = {
+  rollno: 102,
+  name: "Dlice",
+  age: 21,
+  marks: [81, 99, 78],
+  totalMarks: function () {
+    return this.marks.reduce((acc, cur) => acc + cur, 0);
+  },
+  grade: function () {
+    var total = this.totalMarks();
+    var percentage = total / 3;
+
+    if (percentage >= 90) {
+      return "A+";
+    } else if (percentage >= 80) {
+      return "A";
+    } else if (percentage >= 70) {
+      return "B";
+    } else if (percentage >= 60) {
+      return "C";
+    } else {
+      return "F";
+    }
+  },
+};
+
+undefined
+// Creating student objects using Object Literal
+var student3 = {
+  rollno: 103,
+  name: "slice",
+  age: 21,
+  marks: [83, 90, 70],
+  totalMarks: function () {
+    return this.marks.reduce((acc, cur) => acc + cur, 0);
+  },
+  grade: function () {
+    var total = this.totalMarks();
+    var percentage = total / 3;
+
+    if (percentage >= 90) {
+      return "A+";
+    } else if (percentage >= 80) {
+      return "A";
+    } else if (percentage >= 70) {
+      return "B";
+    } else if (percentage >= 60) {
+      return "C";
+    } else {
+      return "F";
+    }
+  },
+};
+
+undefined
+var student4 = {
+  rollno: 104,
+  name: "flice",
+  age: 23,
+  marks: [80, 91, 71],
+  totalMarks: function () {
+    return this.marks.reduce((acc, cur) => acc + cur, 0);
+  },
+  grade: function () {
+    var total = this.totalMarks();
+    var percentage = total / 3;
+
+    if (percentage >= 90) {
+      return "A+";
+    } else if (percentage >= 80) {
+      return "A";
+    } else if (percentage >= 70) {
+      return "B";
+    } else if (percentage >= 60) {
+      return "C";
+    } else {
+      return "F";
+    }
+  },
+};
+
+undefined
+student1;
+{rollno: 101, name: 'Alice', age: 20, marks: Array(3), totalMarks: ƒ, …}age: 20grade: ƒ ()arguments: nullcaller: nulllength: 0name: "grade"prototype: {constructor: ƒ}[[FunctionLocation]]: VM60:10[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]marks: (3) [85, 90, 78]0: 851: 902: 78length: 3[[Prototype]]: Array(0)name: "Alice"rollno: 101totalMarks: ƒ ()arguments: nullcaller: nulllength: 0name: "totalMarks"prototype: {constructor: ƒ}[[FunctionLocation]]: VM60:7[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1][[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+student2;
+{rollno: 102, name: 'Dlice', age: 21, marks: Array(3), totalMarks: ƒ, …}
+student3;
+{rollno: 103, name: 'slice', age: 21, marks: Array(3), totalMarks: ƒ, …}
+student4;
+{rollno: 104, name: 'flice', age: 23, marks: Array(3), totalMarks: ƒ, …}
+//So here we have learn that we have to make them individuall because of Specific types
+undefined
+// Generic Objects (Function Constructor and Prototype Approach):
+
+// Generic objects are created using a constructor function, and their methods are defined in a shared prototype.
+// They are suitable for scenarios where you need multiple objects of the same type with shared characteristics.
+// All objects created from the same constructor share the same set of methods, reducing memory consumption.
+// Changes made to the prototype are reflected in all objects created from the constructor.
+undefined
+// Creating student objects using Function Constructor and Prototype
+function Student(rollno, name, age, marks) {
+  this.rollno = rollno;
+  this.name = name;
+  this.age = age;
+  this.marks = marks;
+}
+
+Student.prototype.totalMarks = function () {
+  return this.marks.reduce((acc, cur) => acc + cur, 0);
+};
+
+Student.prototype.grade = function () {
+  var total = this.totalMarks();
+  var percentage = total / 3;
+
+  if (percentage >= 90) {
+    return "A+";
+  } else if (percentage >= 80) {
+    return "A";
+  } else if (percentage >= 70) {
+    return "B";
+  } else if (percentage >= 60) {
+    return "C";
+  } else {
+    return "F";
+  }
+};
+
+// Creating student objects using Function Constructor
+var student1 = new Student(101, "Alice", 21, [83, 40, 70]);
+var student2 = new Student(102, "slice", 22, [82, 20, 72]);
+var student3 = new Student(103, "flice", 23, [81, 20, 74]);
+var student4 = new Student(104, "glice", 23, [85, 90, 78]);
+
+
+ƒ () {
+  var total = this.totalMarks();
+  var percentage = total / 3;
+
+  if (percentage >= 90) {
+    return "A+";
+  } else if (percentage >= 80) {
+    return "A";
+  } else if (percentage >= 70) {
+    r…
+student1;
+Student {rollno: 101, name: 'Alice', age: 21, marks: Array(3)}age: 21marks: (3) [83, 40, 70]name: "Alice"rollno: 101[[Prototype]]: Object
+student2;
+Student {rollno: 102, name: 'slice', age: 22, marks: Array(3)}
+student3;
+Student {rollno: 103, name: 'flice', age: 23, marks: Array(3)}
+student4;
+Student {rollno: 104, name: 'glice', age: 23, marks: Array(3)}
+//Here we can see that we have not any problem on defineing new objects inside one function and used that function many times for the same
+undefined
+// The Object Literal approach is specific to each object, while the Function Constructor and Prototype approach is generic, allowing you to create multiple objects with shared methods and properties. The latter is more memory-efficient when dealing with a large number of objects of the same type.
+undefined
