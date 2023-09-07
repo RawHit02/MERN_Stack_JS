@@ -1,0 +1,214 @@
+//Ques -> Create a person Type , Person can have Id,Name, City and it has a function to print the person details, There would be another type Employee and Employee has Salary, Bonus , Dept also it has Function to print the Employee Details , the Employee Function must be linked with Person
+// Hint : Function Constructor , Prototype , __proto__ , call function
+undefined
+//function constructoe
+undefined
+//function constructor
+undefined
+function person(id, name, city){
+    this.id=id;
+    this.name = name;
+    this.city = city;
+}
+undefined
+//var amit = new person(10001,'rohit','doon');
+undefined
+person.prototype.persondetails = function(){
+    console.log(`Id is ${this.id} + Name is ${this.name} City is ${this.city}`); 
+VM1444:2 Uncaught SyntaxError: Unexpected end of input
+person.prototype.persondetails = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);} 
+ƒ (){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);}
+//var amit = new person(10001,'rohit','doon');
+undefined
+function person(id, name, city){
+    this.id=id;
+    this.name = name;
+    this.city = city;
+}
+undefined
+person.prototype.persondetails = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);} 
+ƒ (){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);}
+//Function Constructor
+function person(id, name, city){
+    this.id=id;
+    this.name = name;
+    this.city = city;
+}
+person.prototype.persondetails = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);
+}
+//Function Constructor
+function Employee(salary , bonus , dept){
+    this.salary = salary;
+    this.bonus = bonus;
+    this.dept = dept;
+}
+Employee.prototype.EmployeeDetails = function(){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+    
+
+ƒ (){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+typeof person
+'function'
+person.prototype;
+{persondetails: ƒ, constructor: ƒ}
+type of person.prototype;
+VM1976:1 Uncaught SyntaxError: Unexpected identifier 'of'
+typeof person.prototype;
+'object'
+typeof Employee
+'function'
+typeof Employee.prototype;
+'object'
+Employee.prototype.__proto__==object.prototype;
+VM2130:1 Uncaught ReferenceError: object is not defined
+    at <anonymous>:1:31
+(anonymous) @ VM2130:1
+Employee.prototype.__proto__==Object.prototype;
+true
+Employee.prototype.__proto__ == Person.prototype.__proto__
+VM2265:1 Uncaught ReferenceError: Person is not defined
+    at <anonymous>:1:33
+(anonymous) @ VM2265:1
+Employee.prototype.__proto__ == person.prototype.__proto__
+true
+Employee.prototype.__proto__ == Object.prototype;
+true
+Employee.prototype.__proto__ == Person.prototype.__proto__;
+VM2443:1 Uncaught ReferenceError: Person is not defined
+    at <anonymous>:1:33
+(anonymous) @ VM2443:1
+Employee.prototype.__proto__ == person.prototype.__proto__;
+true
+Employee.prototype.__proto__ == person.prototype;
+false
+Employee.prototype.__proto__ = person.prototype;
+{persondetails: ƒ, constructor: ƒ}
+Employee.prototype.__proto__ == Object.prototype;
+false
+Employee.prototype.__proto__ == person.prototype;
+true
+//Linked the Employee data to the person by first assaign it by = and then by ==
+undefined
+//Function Constructor
+function person(id, name, city){
+    this.id=id;
+    this.name = name;
+    this.city = city;
+}
+person.prototype.persondetails = function(){
+    console.log(`Id is ${this.id} Name is ${this.name} City is ${this.city}`);
+}
+//Function Constructor
+function Employee(id,name,city,salary , bonus , dept){
+    //id , name , city -> Give these to the person
+    console.log('this is', this);
+    // var p = new person()
+    person.call(this, id , name , city); //This here is (Employee) data binds with person
+    this.salary = salary;
+    this.bonus = bonus;
+    this.dept = dept;
+}
+Employee.prototype.EmployeeDetails = function(){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+    
+
+ƒ (){
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+Employee.prototype.__proto__ = person.prototype;
+{persondetails: ƒ, constructor: ƒ}
+Employee.prototype.__proto__ == person.prototype;
+true
+// for the same linkage creation
+undefined
+var rohit = new Employee(1001,'rohit','doon',1211,2121,'CSE');
+VM3018:13 this is Employee {}
+undefined
+rohit
+Employee {id: 1001, name: 'rohit', city: 'doon', salary: 1211, bonus: 2121, …}
+rohit.EmployeeDetails();
+VM3018:21 Salary 1211 Bonus 2121 Dept CSE
+undefined
+rohit.persondetails();
+VM3018:8 Id is 1001 Name is rohit City is doon
+undefined
+rohit.__proto__
+person {EmployeeDetails: ƒ, constructor: ƒ}
+rohit.__proto__ == Employee.prototype;
+true
+rohit.__proto__.__proto__.__proto__ == Object.prototype;
+true
+rohit.__proto__.__proto__.__proto__.__proto__ == Object.prototype;
+false
+rohit.__proto__.__proto__.__proto__.__proto__ == null;
+true
+Employee.prototype.EmployeeDetails = function(){
+    this.persondetails();
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+ƒ (){
+    this.persondetails();
+    console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+}
+rohit.EmployeeDetails();
+VM3018:8 Id is 1001 Name is rohit City is doon
+VM3780:3 Salary 1211 Bonus 2121 Dept CSE
+undefined
+//Prototype is an Object form and __proto__ is in linkage form __proto__ stores the address of the another prototype
+undefined
+//linke here Employee is an prototype and person also an prototype bothe have their __proto__ with them which stores data and when we have to acquire data from another prototype we use __proto__ to store address of another prototype and then we get that data by default the _proto__ have the project prototype
+undefined
+//for eg:
+Employee.prototype._proto__ == Object.prototype;
+false
+//it is showing false because we have set its protype witht the person prototype
+undefined
+//for eg:
+Employee.prototype._proto__ == person.prototype;
+false
+//for eg:
+person.prototype._proto__ == Employee.prototype;
+false
+//for eg:
+Employee.prototype._proto__ == person.prototype.__proto__;
+false
+//for eg:
+person.prototype._proto__ = Employee.prototype;
+person {EmployeeDetails: ƒ, constructor: ƒ}
+//for eg:
+person.prototype._proto__ == Employee.prototype;
+true
+//Now we havew set person protypeproto with the employee prototype
+undefined
+//remember protype have diffreent addresdd and proto have diffrent __proto__ contains the address of another prototype for data connection
+undefined
+// Employee prototype  address=100= {
+// y:20;
+//     key:value;
+//     __proto__ //address for aconnection 700
+// }
+// Person prototype address=700(connection with employee proto){
+//     x:10;
+//     __proto__: // have an address of 300 of Object prototype
+//     }
+// Object prototype address=300(de3fault address) all have default address until that linked with another{
+// z=30;
+//     __proto__:null;
+// }
+// //Now when we call any var name to take the data from them like here
+// rohit{
+// id:
+// a=10;
+//     place;
+//     __proto__ // having address of 100 which is the address of Employee prototype}
+// //Now whatever we need here in the rohit it will search in all the linked data from person employeee object if found it return else return null this is the way proto and prototype works
+undefined

@@ -1,0 +1,140 @@
+//Question -> Create a person Type , Person can have Id,Name, City and it has a function to print the person details, There would be another type Employee and Employee has Salary, Bonus , Dept also it has Function to print the Employee Details , the Employee Function must be linked with Person
+undefined
+//New Mechanism by ES6 Class Style
+undefined
+class A{
+
+}
+undefined
+typeof A
+'function'
+class person{
+    constructor(id,name,city){
+        this.id = id;
+    }
+}
+undefined
+class person{
+    constructor(id,name,city){
+        this.id = id;
+        this.name = name;
+        this.city = city;
+    }
+    persondetails(){
+        console.log(`ID is ${this.id} Name is ${this.name} city is ${this.city}`);
+    }
+}
+class Employee extends person{
+    constructor(id,name, city,salary,bonus,dept){
+        super(id,name,city);
+        this.salary = salary;
+        this.bonus = bonus;
+        this.dept = dept;
+    }
+    employeedetails(){
+        super.persondetails();
+        console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+    }
+}
+undefined
+typeof person
+'function'
+typeof Employee
+'function'
+person.prototype;
+{constructor: ƒ, persondetails: ƒ}
+Employee.prototype;
+person {constructor: ƒ, employeedetails: ƒ}
+Employee.prototype.__proto__ == person.prototype;
+true
+var ro = new Employee(1001,'rohit','Doon',9000000,2133,'CSE');
+undefined
+ro
+Employee {id: 1001, name: 'rohit', city: 'Doon', salary: 9000000, bonus: 2133, …}
+ro.employeedetails;
+ƒ employeedetails(){
+        super.persondetails();
+        console.log(`Salary ${this.salary} Bonus ${this.bonus} Dept ${this.dept}`);
+    }
+ro.employeedetails();
+VM1133:8 ID is 1001 Name is rohit city is Doon
+VM1133:20 Salary 9000000 Bonus 2133 Dept CSE
+undefined
+class Q{
+    static show(){
+        console.log("Q show");
+    }
+}
+undefined
+typeof Q;
+'function'
+function T(){
+    console.log("T");
+}
+undefined
+f();
+VM2001:1 Uncaught ReferenceError: f is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2001:1
+function T(){
+    console.log("T");
+}
+undefined
+
+T.show
+ƒ (){
+    console.lgo("SHOW");
+}
+T.show()
+VM2229:2 Uncaught TypeError: console.lgo is not a function
+    at T.show (<anonymous>:2:13)
+    at <anonymous>:1:3
+T.show @ VM2229:2
+(anonymous) @ VM2330:1
+T.show = function(){
+    console.log("SHOW");
+}
+
+ƒ (){
+    console.log("SHOW");
+}
+T.show()
+VM2339:2 SHOW
+undefined
+var w = new Object();
+undefined
+var w = new Function();
+undefined
+w;
+ƒ anonymous(
+) {
+
+}
+var f = new Function();
+undefined
+f
+ƒ anonymous(
+) {
+
+}
+f;
+ƒ anonymous(
+) {
+
+}
+typeof f;
+'function'
+typeof w;
+'function'
+var w = new Object();
+undefined
+typeof w;
+'object'
+//This is called prototype channing
+undefined
+//This is the new techniques to determine the question with the prototype
+undefined
+# another way of solving
+VM3004:1 Uncaught SyntaxError: Invalid or unexpected token
+// # another way of solving
+undefined

@@ -1,0 +1,52 @@
+function Person(id, name, age, city) {
+    this.id = id;
+    this.name = name;
+    this.age = age;
+    this.city = city;
+}
+function Student(id, name, age, city, marks, grade, college) {
+    Person.call(this, id, name, age, city);
+    this.marks = marks;
+    this.grade = grade;
+    this.college = college;
+}
+function Employee(id, name, age, city, salary, bonus, companyName) {  
+    Person.call(this, id, name, age, city);
+    this.salary = salary;
+    this.bonus = bonus;
+    this.companyName = companyName;
+}
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+Employee.prototype = Object.create(Person.prototype);
+Employee.prototype.constructor = Employee;
+const student1 = new Student(1, "Alice", 20, "New York", 95, "A", "ABC College");
+const employee1 = new Employee(101, "Bob", 30, "San Francisco", 60000, 5000, "XYZ Corp");
+console.log(student1.name); // "Alice"
+console.log(employee1.companyName); // "XYZ Corp"
+VM181:25 Alice
+VM181:26 XYZ Corp
+undefined
+console.log(Student.__proto__)
+VM358:1 ƒ () { [native code] }
+undefined
+console.log(student1 instanceof Person); 
+console.log(employee1 instanceof Person); 
+VM423:1 true
+VM423:2 true
+undefined
+console.log(student1);
+VM502:1 Student {id: 1, name: 'Alice', age: 20, city: 'New York', marks: 95, …}
+undefined
+console.log(employee1);
+VM656:1 Employee {id: 101, name: 'Bob', age: 30, city: 'San Francisco', salary: 60000, …}
+undefined
+console.log(employee1.prototype=== student1.prototype);
+VM940:1 true
+undefined
+console.log(employee1.prototype=== Person.prototype);
+VM954:1 false
+undefined
+console.log(employee1.__proto__.prototype=== employee1.__proto__.prototype);
+VM1005:1 true
+undefined
